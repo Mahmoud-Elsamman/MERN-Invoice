@@ -1,6 +1,6 @@
 build:
-	docker compose -f local.yaml up --build -d --remove orphans		
-	
+	docker compose -f local.yaml up --build -d --remove-orphans		
+
 up: 
 	docker compose -f local.yaml up -d
 
