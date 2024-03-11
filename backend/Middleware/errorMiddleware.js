@@ -15,4 +15,4 @@ const notFoundHandler = (req, res, next) => {
   next(error);
 };
 
-export default { errorHandler, notFoundHandler };
+export { errorHandler, notFoundHandler };

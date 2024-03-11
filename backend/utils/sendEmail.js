@@ -25,7 +25,7 @@ const sendEmail = async (email, subject, payload, template) => {
       html: compiledTemplate(payload),
     };
 
-    await transporter.sendEmail(emailOptions);
+    await transporter.sendMail(emailOptions);
   } catch (error) {
     systemLogs.error(`Error sending email: ${error}`);
   }

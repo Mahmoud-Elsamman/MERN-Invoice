@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import validator from "validator";
-import { USER } from "../constants";
+import { USER } from "../constants/index.js";
 import bcrypt from "bcryptjs";
 
 const userSchema = new Schema(
@@ -62,7 +62,7 @@ const userSchema = new Schema(
         validator: function (value) {
           return value === this.password;
         },
-        message: "Passwords do not match",
+        message: "Passwords does not match",
       },
     },
 
