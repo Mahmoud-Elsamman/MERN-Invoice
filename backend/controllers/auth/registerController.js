@@ -6,8 +6,8 @@ const domainURL = process.env.DOMAIN;
 const { randomBytes } = await import("crypto");
 
 // $-title Register User and send email verification link
-// $-path POST /api/v1/auth/register
-// $-auth public
+// $-path  POST /api/v1/auth/register
+// $-auth  Public
 
 const registerUser = asyncHandler(async (req, res) => {
   const { email, username, firstName, lastName, password, passwordConfirm } =
