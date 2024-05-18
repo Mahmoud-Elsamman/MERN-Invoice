@@ -95,11 +95,11 @@ const newAccessToken = asyncHandler(async (req, res) => {
 
       res.json({
         success: true,
-        firstName: existingUser.firstName,
-        lastName: existingUser.lastName,
-        username: existingUser.username,
-        provider: existingUser.provider,
-        avatar: existingUser.avatar,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        username: user.username,
+        provider: user.provider,
+        avatar: user.avatar,
         accessToken,
       });
     }
