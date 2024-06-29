@@ -8,6 +8,8 @@ import connectionToDB from "./config/connectDB.js";
 import mongoSanitize from "express-mongo-sanitize";
 import { notFoundHandler, errorHandler } from "./Middleware/errorMiddleware.js";
 import authRouter from "./routes/authRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import { apiLimiter } from "./Middleware/apiLimiter.js";
 
 await connectionToDB();
 
@@ -32,6 +34,8 @@ app.get("/api/v1/test", (req, res) => {
 });
 
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/user", apiLimiter, userRouter);
+
 app.use(notFoundHandler);
 app.use(errorHandler);
 
