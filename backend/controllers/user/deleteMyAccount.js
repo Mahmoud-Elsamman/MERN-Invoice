@@ -1,6 +1,6 @@
 import User from "../../models/userModel.js";
 import asyncHandler from "express-async-handler";
-// $-title Delete User Account
+// $-title Delete My Account
 // $-path  DELETE /api/v1/user/profile
 // $-auth  Private
 
